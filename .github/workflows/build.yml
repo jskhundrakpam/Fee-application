@@ -23,7 +23,6 @@ jobs:
           cmdline-tools-version: 12266719
           packages: 'platforms;android-34 build-tools;34.0.0'
           
-      # We changed this to @v3 and added cache: false
       - uses: gradle/actions/setup-gradle@v3
         with:
           gradle-version: '8.7'
@@ -31,7 +30,7 @@ jobs:
           
       - name: Build Debug APK
         env:
-          JAVA_HOME: ${{ env.JAVA_HOME_17_X64 }}
+          JAVA_HOME: ${{ env.JAVA_HOME }}
         run: gradle assembleDebug --no-daemon --stacktrace
         
       - name: Upload APK
