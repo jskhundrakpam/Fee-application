@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:gravity="center_vertical">
+    <TextView android:id="@+id/rowTitle"
+        android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_weight="1" android:textStyle="bold" android:textSize="15sp"/>
+    <Button android:id="@+id/presentBtn"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="P" android:textSize="12sp"
+        android:minWidth="0dp" android:minHeight="0dp"
+        android:paddingLeft="14dp" android:paddingRight="14dp"
+        android:paddingTop="6dp" android:paddingBottom="6dp"
+        android:layout_marginRight="4dp"/>
+    <Button android:id="@+id/absentBtn"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="A" android:textSize="12sp"
+        android:minWidth="0dp" android:minHeight="0dp"
+        android:paddingLeft="14dp" android:paddingRight="14dp"
+        android:paddingTop="6dp" android:paddingBottom="6dp"
+        android:backgroundTint="@color/danger"/>
+</LinearLayout>
