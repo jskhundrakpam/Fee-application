@@ -1,0 +1,8 @@
+<resources>
+    <color name="primary">#00796B</color>
+    <color name="primary_dark">#004D40</color>
+    <color name="warn">#FF9800</color>
+    <color name="danger">#D32F2F</color>
+    <color name="text_light">#777777</color>
+    <color name="white">#FFFFFF</color>
+</resources>
