@@ -28,6 +28,8 @@ jobs:
           gradle-version: '8.7'
           
       - name: Build Debug APK
+        env:
+          JAVA_HOME: ${{ env.JAVA_HOME_17_X64 }}
         run: gradle assembleDebug --no-daemon --stacktrace
         
       - name: Upload APK
