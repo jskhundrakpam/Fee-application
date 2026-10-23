@@ -23,9 +23,11 @@ jobs:
           cmdline-tools-version: 12266719
           packages: 'platforms;android-34 build-tools;34.0.0'
           
-      - uses: gradle/actions/setup-gradle@v4
+      # We changed this to @v3 and added cache: false
+      - uses: gradle/actions/setup-gradle@v3
         with:
           gradle-version: '8.7'
+          cache: false
           
       - name: Build Debug APK
         env:
