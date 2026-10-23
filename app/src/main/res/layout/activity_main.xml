@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        android:padding="14dp"
+        android:text="Physics Tuition Manager"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/backupBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF3CD"
+        android:padding="10dp"
+        android:textColor="#856404"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:visibility="gone"
+        android:text="Weekly backup due — open the Backup tab." />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- ============ BATCHES ============ -->
+        <ScrollView
+            android:id="@+id/sectionBatches"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="My Batches" android:textStyle="bold" android:textSize="16sp"
+                    android:textColor="@color/primary_dark" android:paddingBottom="8dp"/>
+                <EditText android:id="@+id/batchNameInput" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:hint="e.g. Class IX - Morning"/>
+                <Button android:id="@+id/addBatchBtn" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="Add Batch"/>
+                <LinearLayout android:id="@+id/batchListContainer" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="vertical"
+                    android:layout_marginTop="12dp"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- ============ STUDENTS ============ -->
+        <ScrollView
+            android:id="@+id/sectionStudents"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Students" android:textStyle="bold" android:textSize="16sp"
+                    android:textColor="@color/primary_dark" android:paddingBottom="8dp"/>
+                <EditText android:id="@+id/studentNameInput" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:hint="Student name"/>
+                <EditText android:id="@+id/studentPhoneInput" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:hint="Phone (optional)"
+                    android:inputType="phone"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Batch" android:textSize="13sp" android:textColor="@color/text_light"
+                    android:paddingTop="8dp"/>
+                <Spinner android:id="@+id/studentBatchSpinner"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <Button android:id="@+id/addStudentBtn" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="Add Student"/>
+                <LinearLayout android:id="@+id/studentListContainer" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="vertical"
+                    android:layout_marginTop="12dp"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- ============ ATTENDANCE ============ -->
+        <ScrollView
+            android:id="@+id/sectionAttendance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Attendance" android:textStyle="bold" android:textSize="16sp"
+                    android:textColor="@color/primary_dark" android:paddingBottom="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Batch" android:textSize="13sp" android:textColor="@color/text_light"/>
+                <Spinner android:id="@+id/attendanceBatchSpinner"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Date" android:textSize="13sp" android:textColor="@color/text_light"
+                    android:paddingTop="8dp"/>
+                <EditText android:id="@+id/attendanceDateInput"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <LinearLayout android:id="@+id/attendanceListContainer"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:layout_marginTop="12dp"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- ============ FEES ============ -->
+        <ScrollView
+            android:id="@+id/sectionFees"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Fees" android:textStyle="bold" android:textSize="16sp"
+                    android:textColor="@color/primary_dark" android:paddingBottom="8dp"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Student" android:textSize="13sp" android:textColor="@color/text_light"/>
+                <Spinner android:id="@+id/feeStudentSpinner"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <EditText android:id="@+id/feeAmountInput" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:hint="Amount (₹)"
+                    android:inputType="numberDecimal"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Date" android:textSize="13sp" android:textColor="@color/text_light"
+                    android:paddingTop="8dp"/>
+                <EditText android:id="@+id/feeDateInput"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <Button android:id="@+id/addFeeBtn" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="Record Payment"/>
+                <LinearLayout android:id="@+id/feeListContainer" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="vertical"
+                    android:layout_marginTop="12dp"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- ============ BACKUP ============ -->
+        <ScrollView
+            android:id="@+id/sectionBackup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="12dp"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Backup &amp; Restore" android:textStyle="bold" android:textSize="16sp"
+                    android:textColor="@color/primary_dark" android:paddingBottom="8dp"/>
+                <TextView android:id="@+id/backupStatusText" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:paddingBottom="4dp"
+                    android:textSize="14sp" android:textStyle="bold"/>
+                <TextView android:id="@+id/backupDataSizeText" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textSize="12sp"
+                    android:textColor="@color/text_light" android:paddingBottom="12dp"/>
+                <Button android:id="@+id/saveBackupBtn" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="💾 Save Backup File (.json)"/>
+                <Button android:id="@+id/shareBackupBtn" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="📤 Share Backup (WhatsApp/Drive)"/>
+                <Button android:id="@+id/importBackupBtn" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="📥 Restore from Backup File"/>
+
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Auto-Saved Snapshots (every 7 days, last 8 kept)"
+                    android:textStyle="bold" android:textSize="14sp" android:paddingTop="20dp"
+                    android:paddingBottom="6dp" android:textColor="@color/primary_dark"/>
+                <LinearLayout android:id="@+id/snapshotListContainer"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <!-- Bottom tab bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:elevation="4dp">
+        <Button android:id="@+id/tabBatches" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="Batches" android:textSize="11sp"
+            android:backgroundTint="@color/primary"/>
+        <Button android:id="@+id/tabStudents" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="Students" android:textSize="11sp"
+            android:backgroundTint="@color/primary_dark"/>
+        <Button android:id="@+id/tabAttendance" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="Attend." android:textSize="11sp"
+            android:backgroundTint="@color/primary_dark"/>
+        <Button android:id="@+id/tabFees" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="Fees" android:textSize="11sp"
+            android:backgroundTint="@color/primary_dark"/>
+        <Button android:id="@+id/tabBackup" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="Backup" android:textSize="11sp"
+            android:backgroundTint="@color/primary_dark"/>
+    </LinearLayout>
+</LinearLayout>
